@@ -8,12 +8,15 @@ public class FizzBuzz {
 
 
 	public String fizzBuzz(int entree) {
+		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < nombresSpeciaux.length; i++) {
 			if(entree % nombresSpeciaux[i] == 0) {
-				return valeursSpeciales[i];
+				sb.append(valeursSpeciales[i]);
 			}
 		}
-		return Integer.toString(entree);
+		if(sb.length() == 0)
+			sb.append(Integer.toString(entree));
+		return sb.toString();
 	}
 
 }
