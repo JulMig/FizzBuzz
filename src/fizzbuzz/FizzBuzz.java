@@ -9,7 +9,7 @@ public class FizzBuzz {
 
 	public String fizzBuzz(int entree) {
 		for (int i = 0; i < nombresSpeciaux.length; i++) {
-			if(entree == nombresSpeciaux[i]) {
+			if(entree % nombresSpeciaux[i] == 0) {
 				return valeursSpeciales[i];
 			}
 		}
