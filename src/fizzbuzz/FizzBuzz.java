@@ -3,11 +3,16 @@ package fizzbuzz;
 
 public class FizzBuzz {
 	
-	public static final String FIZZ = "fizz";
+	private int[] nombresSpeciaux = {3,5};
+	private String[] valeursSpeciales = {"fizz", "buzz"};
+
 
 	public String fizzBuzz(int entree) {
-		if (entree==3)
-			return FIZZ;
+		for (int i = 0; i < nombresSpeciaux.length; i++) {
+			if(entree == nombresSpeciaux[i]) {
+				return valeursSpeciales[i];
+			}
+		}
 		return Integer.toString(entree);
 	}
 
